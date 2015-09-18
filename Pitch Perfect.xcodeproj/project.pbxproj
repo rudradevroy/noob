@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		08AD479D1BAB10AA006F22DF /* PlayUserSoundViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08AD479C1BAB10AA006F22DF /* PlayUserSoundViewController.swift */; };
 		08AD479F1BAB37EE006F22DF /* movie_quote.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 08AD479E1BAB37EE006F22DF /* movie_quote.mp3 */; };
-		08AD47A11BAB380E006F22DF /* 1-10-End-Of-The-Line.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 08AD47A01BAB380E006F22DF /* 1-10-End-Of-The-Line.mp3 */; };
+		08AD47A11BAB380E006F22DF /* test.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 08AD47A01BAB380E006F22DF /* test.mp3 */; };
 		08D793211BA9E98900E25E1E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08D793201BA9E98900E25E1E /* AppDelegate.swift */; };
 		08D793231BA9E98900E25E1E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08D793221BA9E98900E25E1E /* ViewController.swift */; };
 		08D793261BA9E98900E25E1E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 08D793241BA9E98900E25E1E /* Main.storyboard */; };
@@ -31,7 +31,7 @@
 /* Begin PBXFileReference section */
 		08AD479C1BAB10AA006F22DF /* PlayUserSoundViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlayUserSoundViewController.swift; sourceTree = "<group>"; };
 		08AD479E1BAB37EE006F22DF /* movie_quote.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = movie_quote.mp3; sourceTree = "<group>"; };
-		08AD47A01BAB380E006F22DF /* 1-10-End-Of-The-Line.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "1-10-End-Of-The-Line.mp3"; sourceTree = "<group>"; };
+		08AD47A01BAB380E006F22DF /* test.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = test.mp3; sourceTree = "<group>"; };
 		08D7931B1BA9E98900E25E1E /* Pitch Perfect.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Pitch Perfect.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		08D7931F1BA9E98900E25E1E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		08D793201BA9E98900E25E1E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -85,6 +85,7 @@
 			children = (
 				08D793201BA9E98900E25E1E /* AppDelegate.swift */,
 				08D793221BA9E98900E25E1E /* ViewController.swift */,
+				08AD47A01BAB380E006F22DF /* test.mp3 */,
 				08D793241BA9E98900E25E1E /* Main.storyboard */,
 				08AD479C1BAB10AA006F22DF /* PlayUserSoundViewController.swift */,
 				08D793271BA9E98900E25E1E /* Images.xcassets */,
@@ -98,7 +99,6 @@
 			isa = PBXGroup;
 			children = (
 				08AD479E1BAB37EE006F22DF /* movie_quote.mp3 */,
-				08AD47A01BAB380E006F22DF /* 1-10-End-Of-The-Line.mp3 */,
 				08D7931F1BA9E98900E25E1E /* Info.plist */,
 			);
 			name = "Supporting Files";
@@ -201,7 +201,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				08AD47A11BAB380E006F22DF /* 1-10-End-Of-The-Line.mp3 in Resources */,
+				08AD47A11BAB380E006F22DF /* test.mp3 in Resources */,
 				08D793261BA9E98900E25E1E /* Main.storyboard in Resources */,
 				08D7932B1BA9E98900E25E1E /* LaunchScreen.xib in Resources */,
 				08AD479F1BAB37EE006F22DF /* movie_quote.mp3 in Resources */,

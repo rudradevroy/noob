@@ -41,7 +41,7 @@
                                 <attributedString key="attributedText">
                                     <fragment content="Recording">
                                         <attributes>
-                                            <color key="NSColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <font key="NSFont" size="16" name="TimesNewRomanPSMT"/>
                                             <font key="NSOriginalFont" size="16" name="TimesNewRomanPSMT"/>
                                             <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
@@ -65,7 +65,7 @@
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" cocoaTouchSystemColor="lightTextColor"/>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.59999999999999998" colorSpace="calibratedRGB"/>
                         <color key="tintColor" red="1" green="1" blue="1" alpha="0.59999999999999998" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstAttribute="bottom" secondItem="SNx-l8-RE2" secondAttribute="bottom" constant="20" symbolic="YES" id="1Sq-r7-jnT"/>
@@ -99,12 +99,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="908" y="228"/>
+            <point key="canvasLocation" x="844" y="200"/>
         </scene>
-        <!--Play User Sound View Controller-->
+        <!--Motion-->
         <scene sceneID="qPX-Y2-haL">
             <objects>
-                <viewController id="eCl-Rx-NVR" customClass="PlayUserSoundViewController" customModule="Pitch_Perfect" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Motion" id="eCl-Rx-NVR" customClass="PlayUserSoundViewController" customModule="Pitch_Perfect" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="uJ3-eN-ukZ"/>
                         <viewControllerLayoutGuide type="bottom" id="vZ0-uN-05Q"/>
@@ -114,7 +114,11 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="K0x-TF-ki5">
-                                <rect key="frame" x="16" y="72" width="255" height="200"/>
+                                <rect key="frame" x="44" y="99" width="129" height="129"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="129" id="6k8-ej-VlI"/>
+                                    <constraint firstAttribute="width" constant="129" id="jw8-C5-eGa"/>
+                                </constraints>
                                 <state key="normal" image="Snail">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -122,16 +126,48 @@
                                     <action selector="SlowMo:" destination="eCl-Rx-NVR" eventType="touchUpInside" id="UWa-KS-u6X"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Aca-tJ-G41">
+                                <rect key="frame" x="157" y="568" width="100" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="AQu-PI-FtQ"/>
+                                    <constraint firstAttribute="height" constant="100" id="orF-Xh-BqZ"/>
+                                </constraints>
+                                <state key="normal" image="stop">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="stop:" destination="eCl-Rx-NVR" eventType="touchUpInside" id="1rp-CY-ATp"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" placeholderIntrinsicWidth="129" placeholderIntrinsicHeight="129" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZhS-Fu-MdM">
+                                <rect key="frame" x="234" y="99" width="129" height="129"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="129" id="qdw-dE-CrR"/>
+                                    <constraint firstAttribute="height" constant="129" id="r7E-mv-UJS"/>
+                                </constraints>
+                                <state key="normal" image="fast">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="IncreaseSpeed:" destination="eCl-Rx-NVR" eventType="touchUpInside" id="wiZ-Yd-ddM"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="K0x-TF-ki5" firstAttribute="top" secondItem="uJ3-eN-ukZ" secondAttribute="bottom" constant="25" id="7NZ-FM-OtB"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="K0x-TF-ki5" secondAttribute="trailing" constant="81" id="dOG-gy-1g1"/>
-                            <constraint firstItem="K0x-TF-ki5" firstAttribute="leading" secondItem="1CZ-HG-ytx" secondAttribute="leadingMargin" constant="46" id="e04-QE-p2m"/>
+                            <constraint firstAttribute="centerY" secondItem="ZhS-Fu-MdM" secondAttribute="centerY" constant="232" id="AeL-Mf-Vhp"/>
+                            <constraint firstItem="K0x-TF-ki5" firstAttribute="leading" secondItem="1CZ-HG-ytx" secondAttribute="leadingMargin" constant="30" id="bAT-lk-hAN"/>
+                            <constraint firstItem="vZ0-uN-05Q" firstAttribute="top" secondItem="Aca-tJ-G41" secondAttribute="bottom" constant="68" id="dy2-jK-mb0"/>
+                            <constraint firstAttribute="centerX" secondItem="Aca-tJ-G41" secondAttribute="centerX" id="eTx-xH-btv"/>
+                            <constraint firstItem="K0x-TF-ki5" firstAttribute="top" secondItem="uJ3-eN-ukZ" secondAttribute="bottom" constant="35" id="gse-Jj-PRr"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="ZhS-Fu-MdM" secondAttribute="trailing" constant="30" id="p2E-g2-Gym"/>
+                            <constraint firstAttribute="centerY" secondItem="K0x-TF-ki5" secondAttribute="centerY" constant="231.5" id="xhg-LF-viQ"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="Button" destination="K0x-TF-ki5" id="Osv-z1-pr0"/>
+                        <outlet property="SpeedUp" destination="ZhS-Fu-MdM" id="1QT-Zi-UbX"/>
+                        <outlet property="stop1" destination="Aca-tJ-G41" id="lr1-cf-fCq"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pBx-V5-SAu" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -141,7 +177,6 @@
         <!--Navigation Controller-->
         <scene sceneID="nxD-Ha-gCH">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="aUL-Ty-R1a" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="cXS-9V-K3c" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="wTO-Ua-4kO">
@@ -153,12 +188,14 @@
                         <segue destination="vXZ-lx-hvc" kind="relationship" relationship="rootViewController" id="xeB-6K-4dc"/>
                     </connections>
                 </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="aUL-Ty-R1a" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="96" y="228"/>
         </scene>
     </scenes>
     <resources>
         <image name="Snail" width="200" height="200"/>
+        <image name="fast" width="200" height="200"/>
         <image name="recorder" width="100" height="100"/>
         <image name="stop" width="100" height="100"/>
     </resources>
