@@ -12,12 +12,12 @@ import AVFoundation
 class PlayUserSoundViewController: UIViewController {
     
     @IBOutlet weak var Button: UIButton! //snail button
-    
     @IBOutlet weak var SpeedUp: UIButton!
-    
     @IBOutlet weak var stop1: UIButton!
     
     var audioPlayer = AVAudioPlayer()
+    var recievedAudio: RecordedAudio!
+    
     
     override func viewDidLoad()
     {
@@ -51,7 +51,7 @@ class PlayUserSoundViewController: UIViewController {
     @IBAction func SlowMo(sender: UIButton)
     {
         audioPlayer.stop()
-        audioPlayer.rate = 0.5
+    
         audioPlayer.play()
         // Play slow audio
         

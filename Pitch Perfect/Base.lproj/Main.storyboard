@@ -8,7 +8,7 @@
         <!--Record-->
         <scene sceneID="ufC-wZ-h7g">
             <objects>
-                <viewController id="vXZ-lx-hvc" customClass="ViewController" customModule="Pitch_Perfect" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="vXZ-lx-hvc" customClass="RecordsSoundsViewController" customModule="Pitch_Perfect" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
                         <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
@@ -61,12 +61,11 @@
                                 </state>
                                 <connections>
                                     <action selector="Stopper:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="wdI-nk-NOO"/>
-                                    <segue destination="eCl-Rx-NVR" kind="show" id="TCE-WF-IJ3"/>
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.59999999999999998" colorSpace="calibratedRGB"/>
-                        <color key="tintColor" red="1" green="1" blue="1" alpha="0.59999999999999998" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="bottom" secondItem="SNx-l8-RE2" secondAttribute="bottom" constant="20" symbolic="YES" id="1Sq-r7-jnT"/>
                             <constraint firstItem="rZh-Hn-mg4" firstAttribute="centerX" secondItem="faO-6Z-eN0" secondAttribute="centerX" id="RG5-Qa-80D"/>
@@ -95,6 +94,7 @@
                         <outlet property="recordButton" destination="faO-6Z-eN0" id="xKM-Ho-iPC"/>
                         <outlet property="recordingInProgress" destination="rZh-Hn-mg4" id="yc1-mx-YeL"/>
                         <outlet property="stopbutton" destination="SNx-l8-RE2" id="f8q-Dn-wti"/>
+                        <segue destination="eCl-Rx-NVR" kind="show" identifier="StopRecording" id="diX-f1-OjH"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
@@ -113,11 +113,13 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="K0x-TF-ki5">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="K0x-TF-ki5">
                                 <rect key="frame" x="44" y="99" width="129" height="129"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="129" id="6k8-ej-VlI"/>
-                                    <constraint firstAttribute="width" constant="129" id="jw8-C5-eGa"/>
+                                    <constraint firstAttribute="width" constant="129" id="Eeo-mY-WZE"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="129" id="Mqi-PD-4xI"/>
+                                    <constraint firstAttribute="height" constant="129" id="TkE-nZ-5XG"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="129" id="oCR-nU-dlL"/>
                                 </constraints>
                                 <state key="normal" image="Snail">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -126,24 +128,13 @@
                                     <action selector="SlowMo:" destination="eCl-Rx-NVR" eventType="touchUpInside" id="UWa-KS-u6X"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Aca-tJ-G41">
-                                <rect key="frame" x="157" y="568" width="100" height="100"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="100" id="AQu-PI-FtQ"/>
-                                    <constraint firstAttribute="height" constant="100" id="orF-Xh-BqZ"/>
-                                </constraints>
-                                <state key="normal" image="stop">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="stop:" destination="eCl-Rx-NVR" eventType="touchUpInside" id="1rp-CY-ATp"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" placeholderIntrinsicWidth="129" placeholderIntrinsicHeight="129" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZhS-Fu-MdM">
+                            <button opaque="NO" contentMode="scaleToFill" placeholderIntrinsicWidth="129" placeholderIntrinsicHeight="129" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZhS-Fu-MdM">
                                 <rect key="frame" x="234" y="99" width="129" height="129"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="129" id="qdw-dE-CrR"/>
-                                    <constraint firstAttribute="height" constant="129" id="r7E-mv-UJS"/>
+                                    <constraint firstAttribute="height" constant="129" id="C3B-1f-KPu"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="129" id="T7w-i9-u2j"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="129" id="aqj-cf-QbZ"/>
+                                    <constraint firstAttribute="width" constant="129" id="lMK-G1-E9g"/>
                                 </constraints>
                                 <state key="normal" image="fast">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -152,16 +143,25 @@
                                     <action selector="IncreaseSpeed:" destination="eCl-Rx-NVR" eventType="touchUpInside" id="wiZ-Yd-ddM"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Aca-tJ-G41">
+                                <rect key="frame" x="91" y="560" width="232" height="100"/>
+                                <state key="normal" image="stop">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="stop:" destination="eCl-Rx-NVR" eventType="touchUpInside" id="1rp-CY-ATp"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstAttribute="centerY" secondItem="ZhS-Fu-MdM" secondAttribute="centerY" constant="232" id="AeL-Mf-Vhp"/>
-                            <constraint firstItem="K0x-TF-ki5" firstAttribute="leading" secondItem="1CZ-HG-ytx" secondAttribute="leadingMargin" constant="30" id="bAT-lk-hAN"/>
-                            <constraint firstItem="vZ0-uN-05Q" firstAttribute="top" secondItem="Aca-tJ-G41" secondAttribute="bottom" constant="68" id="dy2-jK-mb0"/>
-                            <constraint firstAttribute="centerX" secondItem="Aca-tJ-G41" secondAttribute="centerX" id="eTx-xH-btv"/>
-                            <constraint firstItem="K0x-TF-ki5" firstAttribute="top" secondItem="uJ3-eN-ukZ" secondAttribute="bottom" constant="35" id="gse-Jj-PRr"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="ZhS-Fu-MdM" secondAttribute="trailing" constant="30" id="p2E-g2-Gym"/>
-                            <constraint firstAttribute="centerY" secondItem="K0x-TF-ki5" secondAttribute="centerY" constant="231.5" id="xhg-LF-viQ"/>
+                            <constraint firstItem="Aca-tJ-G41" firstAttribute="leading" secondItem="1CZ-HG-ytx" secondAttribute="leadingMargin" constant="75" id="7Dp-UU-IlV"/>
+                            <constraint firstItem="K0x-TF-ki5" firstAttribute="top" secondItem="uJ3-eN-ukZ" secondAttribute="bottom" constant="35" id="E2l-w6-aoM"/>
+                            <constraint firstItem="ZhS-Fu-MdM" firstAttribute="top" secondItem="uJ3-eN-ukZ" secondAttribute="bottom" constant="35" id="MjR-eQ-fjU"/>
+                            <constraint firstItem="vZ0-uN-05Q" firstAttribute="top" secondItem="Aca-tJ-G41" secondAttribute="bottom" constant="76" id="Tyc-h7-Kpf"/>
+                            <constraint firstItem="Aca-tJ-G41" firstAttribute="centerX" secondItem="1CZ-HG-ytx" secondAttribute="centerX" id="YVG-o8-tjY"/>
+                            <constraint firstItem="K0x-TF-ki5" firstAttribute="leading" secondItem="1CZ-HG-ytx" secondAttribute="leadingMargin" constant="28" id="bXJ-sf-RUN"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="ZhS-Fu-MdM" secondAttribute="trailing" constant="35" id="oNc-RE-chd"/>
                         </constraints>
                     </view>
                     <connections>
