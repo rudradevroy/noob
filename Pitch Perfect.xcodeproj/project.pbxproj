@@ -89,9 +89,9 @@
 			children = (
 				08D793201BA9E98900E25E1E /* AppDelegate.swift */,
 				08D793221BA9E98900E25E1E /* RecordsSoundsViewController.swift */,
+				08AD479C1BAB10AA006F22DF /* PlayUserSoundViewController.swift */,
 				085D2FEB1BB0E78700D788BA /* TestClass.swift */,
 				085D2FE71BB0E3B300D788BA /* recordedAudio.swift */,
-				08AD479C1BAB10AA006F22DF /* PlayUserSoundViewController.swift */,
 				08AD47A01BAB380E006F22DF /* test.mp3 */,
 				08D793241BA9E98900E25E1E /* Main.storyboard */,
 				08D793271BA9E98900E25E1E /* Images.xcassets */,

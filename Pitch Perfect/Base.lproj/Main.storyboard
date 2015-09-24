@@ -91,7 +91,7 @@
                     <navigationItem key="navigationItem" title="Record" id="6ea-mx-X3U"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
                     <connections>
-                        <outlet property="recordButton" destination="faO-6Z-eN0" id="xKM-Ho-iPC"/>
+                        <outlet property="recordButton" destination="faO-6Z-eN0" id="GMK-gm-ixg"/>
                         <outlet property="recordingInProgress" destination="rZh-Hn-mg4" id="yc1-mx-YeL"/>
                         <outlet property="stopbutton" destination="SNx-l8-RE2" id="f8q-Dn-wti"/>
                         <segue destination="eCl-Rx-NVR" kind="show" identifier="StopRecording" id="diX-f1-OjH"/>
@@ -152,12 +152,27 @@
                                     <action selector="stop:" destination="eCl-Rx-NVR" eventType="touchUpInside" id="1rp-CY-ATp"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iqq-UA-NtZ">
+                                <rect key="frame" x="44" y="303" width="129" height="129"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="129" id="PB0-rs-CV5"/>
+                                    <constraint firstAttribute="height" constant="129" id="vz3-RX-VJf"/>
+                                </constraints>
+                                <state key="normal" image="Aliv">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="Chipmunk:" destination="eCl-Rx-NVR" eventType="touchUpInside" id="bHj-Ef-9CR"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="Aca-tJ-G41" firstAttribute="leading" secondItem="1CZ-HG-ytx" secondAttribute="leadingMargin" constant="75" id="7Dp-UU-IlV"/>
                             <constraint firstItem="K0x-TF-ki5" firstAttribute="top" secondItem="uJ3-eN-ukZ" secondAttribute="bottom" constant="35" id="E2l-w6-aoM"/>
+                            <constraint firstItem="iqq-UA-NtZ" firstAttribute="top" secondItem="K0x-TF-ki5" secondAttribute="bottom" constant="75" id="MJO-vS-BfR"/>
                             <constraint firstItem="ZhS-Fu-MdM" firstAttribute="top" secondItem="uJ3-eN-ukZ" secondAttribute="bottom" constant="35" id="MjR-eQ-fjU"/>
+                            <constraint firstItem="iqq-UA-NtZ" firstAttribute="leading" secondItem="1CZ-HG-ytx" secondAttribute="leadingMargin" constant="28" id="SPs-FG-WnI"/>
                             <constraint firstItem="vZ0-uN-05Q" firstAttribute="top" secondItem="Aca-tJ-G41" secondAttribute="bottom" constant="76" id="Tyc-h7-Kpf"/>
                             <constraint firstItem="Aca-tJ-G41" firstAttribute="centerX" secondItem="1CZ-HG-ytx" secondAttribute="centerX" id="YVG-o8-tjY"/>
                             <constraint firstItem="K0x-TF-ki5" firstAttribute="leading" secondItem="1CZ-HG-ytx" secondAttribute="leadingMargin" constant="28" id="bXJ-sf-RUN"/>
@@ -167,6 +182,7 @@
                     <connections>
                         <outlet property="Button" destination="K0x-TF-ki5" id="Osv-z1-pr0"/>
                         <outlet property="SpeedUp" destination="ZhS-Fu-MdM" id="1QT-Zi-UbX"/>
+                        <outlet property="chipmunk" destination="iqq-UA-NtZ" id="QxJ-Fw-RNd"/>
                         <outlet property="stop1" destination="Aca-tJ-G41" id="lr1-cf-fCq"/>
                     </connections>
                 </viewController>
@@ -194,6 +210,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="Aliv" width="200" height="200"/>
         <image name="Snail" width="200" height="200"/>
         <image name="fast" width="200" height="200"/>
         <image name="recorder" width="100" height="100"/>
