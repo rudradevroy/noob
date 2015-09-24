@@ -27,7 +27,8 @@ class PlayUserSoundViewController: UIViewController {
         super.viewDidLoad()
         
         audioFile = AVAudioFile(forReading: recievedAudio.filePathUrl, error: nil)
-        
+        audioPlayer = AVAudioPlayer(contentsOfURL: recievedAudio.filePathUrl, error:nil)
+        audioPlayer.enableRate=true
         
         // Do any additional setup after loading the view.
     }
@@ -67,8 +68,7 @@ class PlayUserSoundViewController: UIViewController {
         audioEngine.stop()
         audioEngine.reset()
         
-        audioPlayer = AVAudioPlayer(contentsOfURL: recievedAudio.filePathUrl, error:nil)
-        audioPlayer.enableRate=true
+        
 
         let audioPlayerNode = AVAudioPlayerNode()
         audioEngine.attachNode(audioPlayerNode)
