@@ -7,14 +7,14 @@
 	<key>IDESourceControlProjectIdentifier</key>
 	<string>CCF510A8-DA75-4988-8F29-299EE21697E8</string>
 	<key>IDESourceControlProjectName</key>
-	<string>project</string>
+	<string>Pitch Perfect</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
 		<key>57F65E03E079ED436D78061DB9C13EE7EB3590A1</key>
 		<string>https://github.com/rudradevroy/noob</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
-	<string>Pitch Perfect.xcodeproj/project.xcworkspace</string>
+	<string>Pitch Perfect.xcodeproj</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
 		<key>57F65E03E079ED436D78061DB9C13EE7EB3590A1</key>
