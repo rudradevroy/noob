@@ -18,9 +18,8 @@ class PlayUserSoundViewController: UIViewController {
     
     var audioPlayer = AVAudioPlayer()
     var recievedAudio: RecordedAudio!
-    var audioEngine: AVAudioEngine!
     var audioFile: AVAudioFile!
-    
+    var audioEngine: AVAudioEngine!
     
     override func viewDidLoad()
     {
@@ -29,7 +28,8 @@ class PlayUserSoundViewController: UIViewController {
         audioFile = AVAudioFile(forReading: recievedAudio.filePathUrl, error: nil)
         audioPlayer = AVAudioPlayer(contentsOfURL: recievedAudio.filePathUrl, error:nil)
         audioPlayer.enableRate=true
-        
+        audioEngine = AVAudioEngine()
+
         // Do any additional setup after loading the view.
     }
 
@@ -55,21 +55,22 @@ class PlayUserSoundViewController: UIViewController {
             audioPlayer.rate = 1.5
             audioPlayer.play()
     }
-   
+    
     @IBAction func Chipmunk(sender: UIButton)
     {
         playAudioWithVariablePitch(1000)
-        
     }
     
-    func playAudioWithVariablePitch(pitch: Float)
+    @IBAction func DarthVadar(sender: UIButton)
     {
+        playAudioWithVariablePitch(-800)
+    }
+    
+    func playAudioWithVariablePitch(pitch: Float){
         audioPlayer.stop()
         audioEngine.stop()
         audioEngine.reset()
         
-        
-
         let audioPlayerNode = AVAudioPlayerNode()
         audioEngine.attachNode(audioPlayerNode)
         
@@ -80,15 +81,11 @@ class PlayUserSoundViewController: UIViewController {
         audioEngine.connect(audioPlayerNode, to: changePitchEffect, format: nil)
         audioEngine.connect(changePitchEffect, to: audioEngine.outputNode, format: nil)
         
-        
         audioPlayerNode.scheduleFile(audioFile, atTime: nil, completionHandler: nil)
         audioEngine.startAndReturnError(nil)
         
         audioPlayerNode.play()
-        
     }
-    
-    
     @IBAction func stop(sender: UIButton)
     {
         

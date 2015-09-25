@@ -113,8 +113,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="K0x-TF-ki5">
-                                <rect key="frame" x="44" y="99" width="129" height="129"/>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="K0x-TF-ki5">
+                                <rect key="frame" x="49" y="99" width="129" height="129"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="129" id="Eeo-mY-WZE"/>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="129" id="Mqi-PD-4xI"/>
@@ -128,8 +128,8 @@
                                     <action selector="SlowMo:" destination="eCl-Rx-NVR" eventType="touchUpInside" id="UWa-KS-u6X"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" placeholderIntrinsicWidth="129" placeholderIntrinsicHeight="129" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZhS-Fu-MdM">
-                                <rect key="frame" x="234" y="99" width="129" height="129"/>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" placeholderIntrinsicWidth="129" placeholderIntrinsicHeight="129" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZhS-Fu-MdM">
+                                <rect key="frame" x="249" y="99" width="129" height="129"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="129" id="C3B-1f-KPu"/>
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="129" id="T7w-i9-u2j"/>
@@ -143,8 +143,8 @@
                                     <action selector="IncreaseSpeed:" destination="eCl-Rx-NVR" eventType="touchUpInside" id="wiZ-Yd-ddM"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Aca-tJ-G41">
-                                <rect key="frame" x="91" y="560" width="232" height="100"/>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Aca-tJ-G41">
+                                <rect key="frame" x="91" y="484" width="232" height="100"/>
                                 <state key="normal" image="stop">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -152,8 +152,8 @@
                                     <action selector="stop:" destination="eCl-Rx-NVR" eventType="touchUpInside" id="1rp-CY-ATp"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iqq-UA-NtZ">
-                                <rect key="frame" x="44" y="303" width="129" height="129"/>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iqq-UA-NtZ">
+                                <rect key="frame" x="49" y="303" width="129" height="129"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="129" id="PB0-rs-CV5"/>
                                     <constraint firstAttribute="height" constant="129" id="vz3-RX-VJf"/>
@@ -162,22 +162,62 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="Chipmunk:" destination="eCl-Rx-NVR" eventType="touchUpInside" id="bHj-Ef-9CR"/>
+                                    <action selector="Chipmunk:" destination="eCl-Rx-NVR" eventType="touchUpInside" id="9n6-Kn-oJK"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jww-9w-0Vy">
+                                <rect key="frame" x="249" y="303" width="129" height="129"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="129" id="3YY-Y4-h9Q"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="129" id="Ede-gV-gIc"/>
+                                    <constraint firstAttribute="width" constant="129" id="Kih-h4-DoW"/>
+                                    <constraint firstAttribute="height" constant="129" id="b9M-5R-ciX"/>
+                                    <constraint firstAttribute="width" constant="129" id="gKW-s5-Lxc"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="129" id="gMR-2N-ydk"/>
+                                </constraints>
+                                <state key="normal" image="darthvadar">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="Ede-gV-gIc"/>
+                                        <exclude reference="b9M-5R-ciX"/>
+                                        <exclude reference="gKW-s5-Lxc"/>
+                                        <exclude reference="gMR-2N-ydk"/>
+                                    </mask>
+                                </variation>
+                                <connections>
+                                    <action selector="DarthVadar:" destination="eCl-Rx-NVR" eventType="touchUpInside" id="VoD-gZ-Dca"/>
                                 </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="Aca-tJ-G41" firstAttribute="leading" secondItem="1CZ-HG-ytx" secondAttribute="leadingMargin" constant="75" id="7Dp-UU-IlV"/>
+                            <constraint firstItem="jww-9w-0Vy" firstAttribute="top" secondItem="ZhS-Fu-MdM" secondAttribute="bottom" constant="75" id="BeE-y3-B1a"/>
                             <constraint firstItem="K0x-TF-ki5" firstAttribute="top" secondItem="uJ3-eN-ukZ" secondAttribute="bottom" constant="35" id="E2l-w6-aoM"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="ZhS-Fu-MdM" secondAttribute="trailing" constant="28" id="G76-RT-X4V"/>
                             <constraint firstItem="iqq-UA-NtZ" firstAttribute="top" secondItem="K0x-TF-ki5" secondAttribute="bottom" constant="75" id="MJO-vS-BfR"/>
                             <constraint firstItem="ZhS-Fu-MdM" firstAttribute="top" secondItem="uJ3-eN-ukZ" secondAttribute="bottom" constant="35" id="MjR-eQ-fjU"/>
                             <constraint firstItem="iqq-UA-NtZ" firstAttribute="leading" secondItem="1CZ-HG-ytx" secondAttribute="leadingMargin" constant="28" id="SPs-FG-WnI"/>
                             <constraint firstItem="vZ0-uN-05Q" firstAttribute="top" secondItem="Aca-tJ-G41" secondAttribute="bottom" constant="76" id="Tyc-h7-Kpf"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="jww-9w-0Vy" secondAttribute="trailing" constant="28" id="W8h-d1-VOU"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="jww-9w-0Vy" secondAttribute="trailing" constant="20" id="Y5A-QE-EsZ"/>
                             <constraint firstItem="Aca-tJ-G41" firstAttribute="centerX" secondItem="1CZ-HG-ytx" secondAttribute="centerX" id="YVG-o8-tjY"/>
                             <constraint firstItem="K0x-TF-ki5" firstAttribute="leading" secondItem="1CZ-HG-ytx" secondAttribute="leadingMargin" constant="28" id="bXJ-sf-RUN"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="ZhS-Fu-MdM" secondAttribute="trailing" constant="35" id="oNc-RE-chd"/>
+                            <constraint firstItem="jww-9w-0Vy" firstAttribute="leading" secondItem="iqq-UA-NtZ" secondAttribute="trailing" constant="61" id="bx8-8j-30H"/>
+                            <constraint firstItem="jww-9w-0Vy" firstAttribute="top" secondItem="ZhS-Fu-MdM" secondAttribute="bottom" constant="75" id="eDh-Fh-vHx"/>
+                            <constraint firstItem="jww-9w-0Vy" firstAttribute="leading" secondItem="iqq-UA-NtZ" secondAttribute="trailing" constant="71" id="eTG-GI-Z5f"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="ZhS-Fu-MdM" secondAttribute="trailing" constant="28" id="oNc-RE-chd"/>
                         </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="W8h-d1-VOU"/>
+                                <exclude reference="bx8-8j-30H"/>
+                                <exclude reference="eDh-Fh-vHx"/>
+                                <exclude reference="eTG-GI-Z5f"/>
+                            </mask>
+                        </variation>
                     </view>
                     <connections>
                         <outlet property="Button" destination="K0x-TF-ki5" id="Osv-z1-pr0"/>
@@ -212,6 +252,7 @@
     <resources>
         <image name="Aliv" width="200" height="200"/>
         <image name="Snail" width="200" height="200"/>
+        <image name="darthvadar" width="200" height="200"/>
         <image name="fast" width="200" height="200"/>
         <image name="recorder" width="100" height="100"/>
         <image name="stop" width="100" height="100"/>

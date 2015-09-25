@@ -9,7 +9,8 @@
 import Foundation
 import UIKit
 
-class RecordedAudio: NSObject{
+class RecordedAudio: NSObject
+{
     var filePathUrl: NSURL!
     var title: String!
     
